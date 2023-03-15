@@ -1,0 +1,1 @@
+This app uses the MERN stack (Mongo DB, Express JS, React JS and Node JS) to create a todo list that allows items to be added, deleted and marked as complete. These list items are stored on a Mongo DB database.
