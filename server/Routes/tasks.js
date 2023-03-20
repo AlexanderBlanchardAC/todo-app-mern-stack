@@ -1,8 +1,8 @@
 const Task = require('../models/task')
 const express = require('express');
-const router = axpress.Router()
+const router = express.Router()
 
-//add todo
+
 router.post('/', async (req, res) => {
     try{
         const task = await new Task(req.body).save();
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     }
 })
 
-//get todos from database
+
 router.get('/', async (req, res) => {
     try{
         const tasks = await Task.find();
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 
 })
 
-//update / edit
+
 router.put('/:id', async (req, res) => {
     try {
         const task = await Task.findOneAndUpdate({
@@ -37,7 +37,9 @@ router.put('/:id', async (req, res) => {
     }
 })
 
-//delete
+
+
+
 router.delete('/:id', async (req, res) => {
     try{
         const task = await Task.findByIdAndDelete(req.params.id)
