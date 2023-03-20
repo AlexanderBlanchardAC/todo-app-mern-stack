@@ -5,9 +5,7 @@ const app = express()
 
 
 app.use(express.json())
-app.use(cors({
-    origin: ["http://localhost:3000", "https://to-do-app-mern-stack.onrender.com" ]
-}))
+app.use(cors())
 
 
 mongoose.connect('mongodb+srv://todomern:Jacobjames0304@todo.pteecks.mongodb.net/ToDoAppMERN?retryWrites=true&w=majority', {
